@@ -1,4 +1,4 @@
-name: Workflow sequentiel
+name: Workflow sequentiel 2
 
 on: 
     workflow_dispatch:
@@ -7,11 +7,11 @@ jobs:
 
     job1:
         runs-on: ubuntu-latest
-        if: {{vars.A > 0 and vars.B > 0:}} 
-            steps:
-            - name: Variable ok
-            run: echo "Valeur de A :" + vars.A
-                 echo "Valeur de B :" + vars.B
+        if: vars.A > 0 && vars.B > 0 
+        steps:
+        - name: Variable ok
+          run: echo "Valeur de A :" + vars.A
+                echo "Valeur de B :" + vars.B
     job2:
         runs-on: ubuntu-latest
         steps:
