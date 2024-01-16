@@ -17,4 +17,12 @@ jobs:
     steps:
     - name: Job1 raté
       run: echo 'Le job1 a échoué !'
+  
+  job3:
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+    - name: Partie bonus
+      run: echo "Il s'execute peut importe le résultat !"
+
     
