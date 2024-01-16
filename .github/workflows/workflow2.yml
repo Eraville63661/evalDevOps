@@ -10,8 +10,8 @@ jobs:
         if: ${{vars.A > 0 && vars.B > 0}}
         steps:
         - name: Variable ok
-          run: echo "Valeur de A :"  ${{vars.A}}
-                echo "Valeur de B :"  ${{vars.B}}
+          run: echo "Valeur de A :" ${{vars.A}}
+               echo "Valeur de B :" ${{vars.B}}
     job2:
         runs-on: ubuntu-latest
         steps:
@@ -28,3 +28,6 @@ jobs:
         
         -   name: Multiplication
             run: python multiplie.py ${{vars.A}}, ${{vars.B}}
+
+        -   name: Loga
+            run: python loga.py ${{vars.A}}, ${{vars.B}}

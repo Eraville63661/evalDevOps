@@ -1,5 +1,8 @@
+import numpy as np
+# import log from numpy
+
 def loga(a, b):
-    import numpy as np
+    
     c = np.log(a*b) #ils vont etre égaux ?
     d = np.log(a) + np.log(b)
 
