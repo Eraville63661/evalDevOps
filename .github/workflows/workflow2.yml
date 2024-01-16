@@ -7,7 +7,7 @@ jobs:
 
     job1:
         runs-on: ubuntu-latest
-        if: vars.A > 0 and vars.B > 0: 
+        if: {{vars.A > 0 and vars.B > 0:}} 
             steps:
             - name: Variable ok
             run: echo "Valeur de A :" + vars.A
