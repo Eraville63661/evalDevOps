@@ -27,7 +27,7 @@ jobs:
             run: pip install -r requirements.txt
         
         -   name: Multiplication
-            run: python multiplie.py ${{vars.A}}, ${{vars.B}}
+            run: python multiplie.py
 
         -   name: Loga
-            run: python loga.py ${{vars.A}}, ${{vars.B}}
+            run: python loga.py
