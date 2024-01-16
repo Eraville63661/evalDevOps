@@ -30,7 +30,7 @@ jobs:
             env:
                 A1: ${{vars.A}}
                 B1: ${{vars.B}}
-            run: python multiplie.py $A1, $B1
+            run: python multiplie.py $A1 $B1
 
         -   name: Loga
             run: python loga.py
