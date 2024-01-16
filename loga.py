@@ -2,8 +2,8 @@ import numpy as np
 # import log from numpy
 
 def loga():
-    a = os.variable.A
-    b = os.variable.B
+    a = os.variables.A
+    b = os.variables.B
 
     c = np.log(a*b) #ils vont etre égaux ?
     d = np.log(a) + np.log(b)
