@@ -1,0 +1,27 @@
+name: Workflow sequentiel
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env:
+      VAR1:'2'
+    steps:
+    - name: Affichage VAR1
+      run: echo $VAR1
+  
+  job2:
+    if: failure()
+      runs-on: ubuntu-latest
+      steps:
+      - name: Job1 raté
+        run: echo 'Le job1 a échoué !'
+
+    if: always()
+      runs-on: ubuntu-latest
+      steps:
+      - name: Partie bonus
+        run: echo "Il s'execute peut importe le résultat !"
+
+    
