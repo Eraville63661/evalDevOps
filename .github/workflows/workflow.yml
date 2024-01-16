@@ -14,13 +14,7 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     if: failure()
-      steps:
-      - name: Job1 raté
-        run: echo 'Le job1 a échoué !'
-
-    if: always()
-      steps:
-      - name: Partie bonus
-        run: echo "Il s'execute peut importe le résultat !"
-
+    steps:
+    - name: Job1 raté
+      run: echo 'Le job1 a échoué !'
     
