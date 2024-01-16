@@ -1,6 +1,9 @@
 name: Workflow sequentiel
 
-on: [push]
+on: 
+  push:
+    tags:
+      - release*
 
 jobs:
   job1:
@@ -23,6 +26,6 @@ jobs:
     if: always()
     steps:
     - name: Partie bonus
-      run: echo "Il s'execute peut importe le résultat !"
+      run: echo "Il s'execute peu importe le résultat !"
 
     

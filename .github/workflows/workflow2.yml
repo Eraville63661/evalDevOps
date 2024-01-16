@@ -1,0 +1,30 @@
+name: Workflow sequentiel
+
+on: 
+    workflow_dispatch:
+
+jobs:
+
+    job1:
+        runs-on: ubuntu-latest
+        if: vars.A > 0 and vars.B > 0: 
+            steps:
+            - name: Variable ok
+            run: echo "Valeur de A :" + vars.A
+                 echo "Valeur de B :" + vars.B
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Checkout
+            uses: actions/checkout@v2
+
+        -   name: Config Python
+            uses: actions/setup-python@v2
+            with:
+                python-version: '3.8'
+
+        -   name: Installe dépendance
+            run: pip install -r requirements.txt
+        
+        -   name: Multiplication
+            run: python multiplie.py vars.A, vars.B
